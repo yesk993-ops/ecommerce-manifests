@@ -44,4 +44,4 @@ images:
     newTag: api-gateway-15-4773cb8
   - name: placeholder/frontend
     newName: mydocker3692/ecommerce-app
-    newTag: frontend-15-4773cb8
+    newTag: frontend-16-1bd9270
