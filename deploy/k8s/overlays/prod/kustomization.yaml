@@ -42,7 +42,7 @@ images:
     newTag: notification-service-9-b0fe6aa
   - name: placeholder/api-gateway
     newName: mydocker3692/ecommerce-app
-    newTag: api-gateway-9-b0fe6aa
+    newTag: api-gateway-12-910989b
   - name: placeholder/frontend
     newName: mydocker3692/ecommerce-app
-    newTag: frontend-9-b0fe6aa
+    newTag: frontend-12-910989b
