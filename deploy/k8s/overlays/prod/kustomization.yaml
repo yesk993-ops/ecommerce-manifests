@@ -17,31 +17,31 @@ resources:
 images:
   - name: placeholder/auth-service
     newName: mydocker3692/ecommerce-app
-    newTag: auth-service-15-4773cb8
+    newTag: auth-service-17-a70b8c2
   - name: placeholder/user-service
     newName: mydocker3692/ecommerce-app
-    newTag: user-service-15-4773cb8
+    newTag: user-service-17-a70b8c2
   - name: placeholder/product-service
     newName: mydocker3692/ecommerce-app
-    newTag: product-service-15-4773cb8
+    newTag: product-service-17-a70b8c2
   - name: placeholder/cart-service
     newName: mydocker3692/ecommerce-app
-    newTag: cart-service-15-4773cb8
+    newTag: cart-service-17-a70b8c2
   - name: placeholder/order-service
     newName: mydocker3692/ecommerce-app
-    newTag: order-service-15-4773cb8
+    newTag: order-service-17-a70b8c2
   - name: placeholder/payment-service
     newName: mydocker3692/ecommerce-app
-    newTag: payment-service-15-4773cb8
+    newTag: payment-service-17-a70b8c2
   - name: placeholder/inventory-service
     newName: mydocker3692/ecommerce-app
-    newTag: inventory-service-15-4773cb8
+    newTag: inventory-service-17-a70b8c2
   - name: placeholder/notification-service
     newName: mydocker3692/ecommerce-app
-    newTag: notification-service-15-4773cb8
+    newTag: notification-service-17-a70b8c2
   - name: placeholder/api-gateway
     newName: mydocker3692/ecommerce-app
-    newTag: api-gateway-15-4773cb8
+    newTag: api-gateway-17-a70b8c2
   - name: placeholder/frontend
     newName: mydocker3692/ecommerce-app
-    newTag: frontend-16-1bd9270
+    newTag: frontend-17-a70b8c2
