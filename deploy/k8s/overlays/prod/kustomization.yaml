@@ -14,11 +14,7 @@ resources:
   - ../../base/notification
   - ../../base/gateway
   - ../../base/frontend
-  - ../../base/infra/namespace.yaml
-  - ../../base/infra/configmap.yaml
-  - ../../base/infra/secrets.yaml
-  - ../../base/infra/ingress.yaml
-  - ../../base/infra/rbac.yaml
+  - ../../base/infra
 images:
   - name: placeholder/auth-service
     newName: mydocker3692/ecommerce-app

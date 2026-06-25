@@ -8,3 +8,5 @@ resources:
   - kafka.yaml
   - configmap.yaml
   - secrets.yaml
+  - ingress.yaml
+  - rbac.yaml
