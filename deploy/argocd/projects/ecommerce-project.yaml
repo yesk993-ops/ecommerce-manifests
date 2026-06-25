@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ecommerce
+  namespace: argocd
+spec:
+  description: E-Commerce Microservices Platform - GitOps managed
+  sourceRepos:
+    - 'https://github.com/yourorg/ecommerce-manifests.git'
+  destinations:
+    - namespace: ecommerce
+      server: https://kubernetes.default.svc
+    - namespace: ecommerce-infra
+      server: https://kubernetes.default.svc
+    - namespace: monitoring
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  orphanedResources:
+    warn: true
+  roles:
+    - name: admin
+      description: Admin access for ecommerce project
+      policies:
+        - p, proj:ecommerce:admin, applications, *, ecommerce/*, allow
+      groups:
+        - ecommerce-admins

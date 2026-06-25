@@ -1,0 +1,8 @@
+*.tfstate
+*.tfvars
+.terraform/
+*.pem
+*.key
+*.cert
+kubeconfig*
+helm/charts/*.tgz

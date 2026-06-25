@@ -1,0 +1,53 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ecommerce
+commonLabels:
+  environment: production
+  managed-by: argocd
+resources:
+  - ../../base/auth
+  - ../../base/user
+  - ../../base/product
+  - ../../base/cart
+  - ../../base/order
+  - ../../base/payment
+  - ../../base/inventory
+  - ../../base/notification
+  - ../../base/gateway
+  - ../../base/frontend
+  - ../../base/infra/namespace.yaml
+  - ../../base/infra/configmap.yaml
+  - ../../base/infra/secrets.yaml
+  - ../../base/infra/ingress.yaml
+  - ../../base/infra/rbac.yaml
+images:
+  - name: ecommerce/auth-service
+    newName: docker.io/ecommerce/auth-service
+    newTag: latest
+  - name: ecommerce/user-service
+    newName: docker.io/ecommerce/user-service
+    newTag: latest
+  - name: ecommerce/product-service
+    newName: docker.io/ecommerce/product-service
+    newTag: latest
+  - name: ecommerce/cart-service
+    newName: docker.io/ecommerce/cart-service
+    newTag: latest
+  - name: ecommerce/order-service
+    newName: docker.io/ecommerce/order-service
+    newTag: latest
+  - name: ecommerce/payment-service
+    newName: docker.io/ecommerce/payment-service
+    newTag: latest
+  - name: ecommerce/inventory-service
+    newName: docker.io/ecommerce/inventory-service
+    newTag: latest
+  - name: ecommerce/notification-service
+    newName: docker.io/ecommerce/notification-service
+    newTag: latest
+  - name: ecommerce/api-gateway
+    newName: docker.io/ecommerce/api-gateway
+    newTag: latest
+  - name: ecommerce/frontend
+    newName: docker.io/ecommerce/frontend
+    newTag: latest
