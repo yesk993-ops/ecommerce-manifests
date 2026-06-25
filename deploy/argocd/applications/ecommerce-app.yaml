@@ -31,8 +31,6 @@ spec:
     repoURL: https://github.com/yesk993-ops/ecommerce-manifests.git
     targetRevision: HEAD
     path: deploy/k8s/overlays/prod
-    kustomize:
-      namePrefix: prod-
   destination:
     server: https://kubernetes.default.svc
     namespace: ecommerce
