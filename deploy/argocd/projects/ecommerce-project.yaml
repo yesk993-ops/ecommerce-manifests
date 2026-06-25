@@ -4,9 +4,9 @@ metadata:
   name: ecommerce
   namespace: argocd
 spec:
-  description: E-Commerce Microservices Platform - GitOps managed
+  description: E-Commerce Microservices Platform
   sourceRepos:
-    - 'https://github.com/yourorg/ecommerce-manifests.git'
+    - 'https://github.com/yesk993-ops/ecommerce-manifests.git'
   destinations:
     - namespace: ecommerce
       server: https://kubernetes.default.svc
@@ -14,20 +14,8 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: monitoring
       server: https://kubernetes.default.svc
-    - namespace: argocd
-      server: https://kubernetes.default.svc
   clusterResourceWhitelist:
-    - group: '*'
-      kind: '*'
-  namespaceResourceWhitelist:
     - group: '*'
       kind: '*'
   orphanedResources:
     warn: true
-  roles:
-    - name: admin
-      description: Admin access for ecommerce project
-      policies:
-        - p, proj:ecommerce:admin, applications, *, ecommerce/*, allow
-      groups:
-        - ecommerce-admins
